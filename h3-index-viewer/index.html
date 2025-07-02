@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>H3 Index Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌐 H3 Index Viewer</h1>
+    <form id="h3-form">
+      <label>
+        Latitude:
+        <input type="number" step="any" id="lat" required value="24.435050">
+      </label>
+      <label>
+        Longitude:
+        <input type="number" step="any" id="lng" required value="54.794900">
+      </label>
+      <label>
+        Resolution:
+        <input type="number" min="0" max="15" id="resolution" required value="7">
+      </label>
+      <button type="submit">Get H3 Index</button>
+    </form>
+
+    <div id="results">
+      <p><strong>H3 Index:</strong> <span id="h3-index">N/A</span></p>
+      <p><strong>Centroid:</strong> <span id="centroid">N/A</span></p>
+    </div>
+
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
 
